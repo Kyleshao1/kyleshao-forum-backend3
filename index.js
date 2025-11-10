@@ -6,7 +6,11 @@ const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://kyleshao-forum.netlify.app"],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
