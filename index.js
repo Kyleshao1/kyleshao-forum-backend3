@@ -1,3 +1,4 @@
+app.use("/api", router);
 require('dotenv').config();
 const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
