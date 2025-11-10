@@ -3,15 +3,15 @@ const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+import router from "./routes/index.js"; 
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
-app.use("/api", router);
 app.use(cors({
   origin: ["https://kyleshao-forum.netlify.app"],
   credentials: true
 }));
-
+app.use("/api", router);
 app.use(bodyParser.json());
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
