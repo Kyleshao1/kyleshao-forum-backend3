@@ -1,4 +1,3 @@
-app.use("/api", router);
 require('dotenv').config();
 const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
@@ -7,6 +6,7 @@ const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
+app.use("/api", router);
 app.use(cors({
   origin: ["https://kyleshao-forum.netlify.app"],
   credentials: true
