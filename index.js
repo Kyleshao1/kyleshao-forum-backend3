@@ -1,10 +1,10 @@
 import 'dotenv/config';
-const express = require('express');
-const { createClient } = require('@supabase/supabase-js');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import express from 'express';
+import { createClient } from '@supabase/supabase-js';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 import router from "./routes/index.js"; 
-const { v4: uuidv4 } = require('uuid');
+import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 app.use(cors({
