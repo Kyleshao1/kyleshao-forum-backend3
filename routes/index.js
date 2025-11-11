@@ -1,5 +1,8 @@
 import express from "express";
 import cors from "cors";
+import authRouter from "./auth.js";
+import postsRouter from "./posts.js";
+import profileRouter from "./profile.js";
 
 const app = express();
 app.use(cors());
