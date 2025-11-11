@@ -1,4 +1,4 @@
-require('dotenv').config();
+import 'dotenv/config';
 const express = require('express');
 const { createClient } = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
