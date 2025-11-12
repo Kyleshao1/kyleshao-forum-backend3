@@ -211,5 +211,7 @@ app.get('/api/admin/run-weekly-decay', async (req,res) => {
   res.json({ ok:true, affected: changed });
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, '0.0.0.0',()=> console.log('Backend listening on', PORT, 'backend_url=', BACKEND_URL));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`✅ Backend is running on port ${PORT}`);
+});
